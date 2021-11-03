@@ -1,12 +1,14 @@
 import React from "react";
 import Navbar from "./components/Nabar";
+import GlobalStyle from "./mainStyles";
 
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <GlobalStyle/>
       <Navbar/>
-    </div>
+    </>
   );
 }
 
