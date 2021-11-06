@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Dropdown from "./components/Dropdown";
 import Hero from "./components/Hero";
+import InfoCard from "./components/InfoCard";
 
 import Navbar from "./components/Navbar";
 import { SliderData } from "./data/SliderData";
+import { InfoData } from "./data/InfoData";
 import GlobalStyle from "./mainStyles";
 
 
@@ -22,6 +24,7 @@ function App() {
       <Navbar toggle={toggle}/>
       <Dropdown isOpen={isOpen} toggle={toggle}/>
       <Hero slides={SliderData}/>
+      <InfoCard info={InfoData}/>
     </>
   );
 }
