@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const InfoSection = styled.div`
-    
+    margin-bottom: 10vh;
 `;
 
 const Card = styled.div`
