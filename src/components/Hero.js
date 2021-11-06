@@ -155,7 +155,7 @@ function Hero({ slides }) {
             setCurrentSlide(currentSlide => (currentSlide === length -1 ? 0 : currentSlide +1 ))
         }
 
-        timeout.currentSlide = setTimeout(onNextSlide, 2000);
+        timeout.current = setTimeout(onNextSlide, 9000);
 
         return function() {
             if(timeout.currentSlide) {
@@ -165,6 +165,10 @@ function Hero({ slides }) {
     }, [currentSlide, length])
 
     const onNextSlidePressed = () => {
+        if(timeout.currentSlide) {
+            clearTimeout(timeout.currentSlide)
+        }
+
         setCurrentSlide(currentSlide === length - 1 ? 0 : currentSlide + 1)
 
         console.log(currentSlide)
@@ -175,6 +179,10 @@ function Hero({ slides }) {
     }
 
     const onPrevSlidePressed = () => {
+        if(timeout.currentSlide) {
+            clearTimeout(timeout.currentSlide)
+        }
+
         setCurrentSlide(currentSlide === 0  ? length -1 : currentSlide - 1)
 
         console.log(currentSlide)
