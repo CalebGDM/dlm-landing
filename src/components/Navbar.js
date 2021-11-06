@@ -53,11 +53,12 @@ const MenuBar = styled(FaBars)`
    @media screen and (max-width: 760px){
         display:block;
         color: white;
+        font-size: 1.5rem;
         cursor: pointer;
         position: abolute;
         top: 0;
         right: 0;
-        transform: translate(-50%, 120%);
+        transform: translate(10%, 100%);
     }
 
     &:hover{
@@ -82,12 +83,12 @@ const NavMenuLinks = styled(Link) `
 `;
 
 
-function Navbar() {
+function Navbar({ toggle }) {
     return (
         <Nav>
             <NavLogo/>
                 
-            <MenuBar/>
+            <MenuBar onClick={toggle}/>
             
             <NavMenu>
                 {menuData.map((item, index) => (
