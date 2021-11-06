@@ -1,5 +1,8 @@
 import React from "react";
-import Navbar from "./components/Nabar";
+import Hero from "./components/Hero";
+
+import Navbar from "./components/Navbar";
+import { SliderData } from "./data/SliderData";
 import GlobalStyle from "./mainStyles";
 
 
@@ -8,6 +11,7 @@ function App() {
     <>
       <GlobalStyle/>
       <Navbar/>
+      <Hero slides={SliderData}/>
     </>
   );
 }
