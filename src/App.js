@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import InfoCard from "./components/InfoCard";
 
 import Navbar from "./components/Navbar";
+import PortfolioCards from "./components/PortfolioCards";
 import { InfoData }  from "./data/InfoData";
 import { SliderData } from "./data/SliderData";
 import GlobalStyle from "./mainStyles";
@@ -25,7 +26,7 @@ function App() {
       <Dropdown isOpen={isOpen} toggle={toggle}/>
       <Hero slides={SliderData}/>
       <InfoCard info={InfoData}/>
-     
+      <PortfolioCards/>
     </>
   );
 }

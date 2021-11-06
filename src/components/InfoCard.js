@@ -42,10 +42,11 @@ const Frase = styled.p`
     text-shadow: 0px 0px 3px black;
 
     @media screen and (max-width: 760px){
-        margin-top: 5vh;
+        margin-top: 15vh;
     }
 
     @media screen and (max-width: 330px){
+        margin-top: 5vh;
         font-size: 23px;
     }
 

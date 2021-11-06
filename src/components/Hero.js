@@ -7,7 +7,7 @@ import styled, { css } from 'styled-components/macro'
 const Section = styled.section`
     height: 100vh;
     max-height: 1100px;
-    positin: relative;
+    position: relative;
     overflow: hidden;
     
 `;
