@@ -110,12 +110,16 @@ const Subtitle = styled.p`
 
 const SliderButtons = styled.div`
     position: absolute;
+    width: 100vw;
     right: 50px;
     bottom: 50px;
     display: flex;
     z-index: 10;
     justify-content: center;
     
+    @media screen and (max-width: 760px){
+        width: 80vw;
+    }
 `;
 
 const arrowButtons = css`
