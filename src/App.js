@@ -35,9 +35,7 @@ function App() {
 
       <PortfolioCards work={PortfolioData}/>
       <Contact contactos={ContactsData}/>
-=======
-      <PortfolioCards/>
->>>>>>> master
+
     </>
   );
 }
