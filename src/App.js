@@ -4,6 +4,8 @@ import Hero from "./components/Hero";
 import InfoCard from "./components/InfoCard";
 
 import Navbar from "./components/Navbar";
+import PortfolioCards from "./components/PortfolioCards";
+import { InfoData }  from "./data/InfoData";
 import { SliderData } from "./data/SliderData";
 import { InfoData } from "./data/InfoData";
 import { ContactsData } from "./data/ContactsData";
@@ -30,8 +32,12 @@ function App() {
       <Dropdown isOpen={isOpen} toggle={toggle}/>
       <Hero slides={SliderData}/>
       <InfoCard info={InfoData}/>
+
       <PortfolioCards work={PortfolioData}/>
       <Contact contactos={ContactsData}/>
+=======
+      <PortfolioCards/>
+>>>>>>> master
     </>
   );
 }

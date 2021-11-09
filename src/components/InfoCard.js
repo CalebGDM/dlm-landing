@@ -2,7 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 const InfoSection = styled.div`
+
     margin-bottom: 10vh;
+
+    
+
 `;
 
 const Card = styled.div`
@@ -20,7 +24,11 @@ const BgImage = styled.img`
 
 const Content = styled.div`
     position: relative;
+
     z-index: 100;
+
+    z-index: 10000;
+
     display: flex;
     align-items: left;
     flex-direction: column;
@@ -42,10 +50,17 @@ const Frase = styled.p`
     text-shadow: 0px 0px 3px black;
 
     @media screen and (max-width: 760px){
+
         margin-top: 10vh;
     }
 
     @media screen and (max-width: 360px){
+
+        margin-top: 15vh;
+    }
+
+    @media screen and (max-width: 330px){
+
         margin-top: 5vh;
         font-size: 23px;
     }
