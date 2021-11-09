@@ -150,7 +150,7 @@ function Hero({ slides }) {
     const length = slides.length;
     const timeout = useRef(null)
 
-    /*useEffect(() => {
+    useEffect(() => {
         const onNextSlide = () => {
             setCurrentSlide(currentSlide => (currentSlide === length -1 ? 0 : currentSlide +1 ))
         }
@@ -162,7 +162,7 @@ function Hero({ slides }) {
                 clearTimeout(timeout.currentSlide)
             }
         }
-    }, [currentSlide, length])*/
+    }, [currentSlide, length])
 
     const onNextSlidePressed = () => {
         if(timeout.currentSlide) {

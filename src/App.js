@@ -6,9 +6,12 @@ import InfoCard from "./components/InfoCard";
 import Navbar from "./components/Navbar";
 import { SliderData } from "./data/SliderData";
 import { InfoData } from "./data/InfoData";
+import { ContactsData } from "./data/ContactsData";
 import GlobalStyle from "./mainStyles";
 import PortfolioCards from "./components/Portfolio";
 import { PortfolioData } from "./data/PortfolioData";
+import Contact from "./components/Contact";
+
 
 
 function App() {
@@ -28,6 +31,7 @@ function App() {
       <Hero slides={SliderData}/>
       <InfoCard info={InfoData}/>
       <PortfolioCards work={PortfolioData}/>
+      <Contact contactos={ContactsData}/>
     </>
   );
 }

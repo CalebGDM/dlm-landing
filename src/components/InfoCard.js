@@ -20,7 +20,7 @@ const BgImage = styled.img`
 
 const Content = styled.div`
     position: relative;
-    z-index: 10000;
+    z-index: 100;
     display: flex;
     align-items: left;
     flex-direction: column;
