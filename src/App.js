@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import InfoCard from "./components/InfoCard";
 
 import Navbar from "./components/Navbar";
-import PortfolioCards from "./components/PortfolioCards";
+import Portfolio from "./components/Portfolio";
 
 import { SliderData } from "./data/SliderData";
 import { InfoData } from "./data/InfoData";
@@ -33,7 +33,7 @@ function App() {
       <Hero slides={SliderData}/>
       <InfoCard info={InfoData}/>
 
-      <PortfolioCards work={PortfolioData}/>
+      <Portfolio work={PortfolioData}/>
       <Contact contactos={ContactsData}/>
 
     </>
