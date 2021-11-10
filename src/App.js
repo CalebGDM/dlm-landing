@@ -13,6 +13,7 @@ import GlobalStyle from "./mainStyles";
 
 import { PortfolioData } from "./data/PortfolioData";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 
 
@@ -35,7 +36,7 @@ function App() {
 
       <Portfolio work={PortfolioData}/>
       <Contact contactos={ContactsData}/>
-
+      <Footer/>
     </>
   );
 }

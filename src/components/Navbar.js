@@ -14,7 +14,12 @@ const Nav = styled.nav`
     position: fixed;
     width: 100%;
     display: flex;
-    background: blue;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.2) 50%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
 
 `;
 
