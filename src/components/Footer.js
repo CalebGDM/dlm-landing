@@ -6,7 +6,9 @@ const Container = styled.section`
     width: 100%;
     height: 60px;
     position: relative;
-    background: #222223;
+    
+    background: #222223;    
+
     
 `;
 

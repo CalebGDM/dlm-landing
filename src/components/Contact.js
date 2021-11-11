@@ -16,6 +16,7 @@ const ContactContainer = styled.section`
     background-size: cover;
     object-fit: cover;
     background-image: url(${Bg})
+    
 `;
 
 const Titulo = styled.h1`
@@ -34,6 +35,7 @@ const Secciones = styled.div`
     grid-template-columns: auto auto;
     grid-gap: 10px;
     padding: 2rem;
+    
 
     @media screen and (max-width: 900px) {
         grid-template-columns: auto;
@@ -46,14 +48,15 @@ const Secciones = styled.div`
 const Formulario = styled.form`
     width: 450px;
     height: auto;
-
+    margin-bottom: 20px;
+    
     @media screen and (max-width: 900px) {
         width: 350px;
      }
 `;
 
 const Contactos = styled.div`
-    
+
 `;
 
 const ContactosTitulo = styled.h3`
@@ -69,6 +72,7 @@ const Contacto = styled.div`
     margin-left: 6rem;
     margin-bottom: 15px;
     color: white;
+  
     
 
     @media screen and (max-width: 900px) {
@@ -77,6 +81,23 @@ const Contacto = styled.div`
     }
 
 `;
+
+const Icono = styled.div`
+    margin-le
+    font-size: 20px;
+`;
+
+const Texto = styled.h1`
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;  
+    @media screen and (max-width: 900px) {
+        font-size:15;
+    }  
+`;
+
+
 
 const CustomIcon = ({ name }) => {
     const IconComponent = Icons[name];
@@ -87,24 +108,6 @@ const CustomIcon = ({ name }) => {
 
     return <IconComponent />;
 };
-
-const IconoEstilos = css`
-    color: white;
-    font-size: 25px;    
-    
-    
-`;
-
-const Texto = styled.h1`
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    margin-left: 15px;  
-    @media screen and (max-width: 900px) {
-        font-size:15;
-    }  
-`;
-
 
 
 function Contact({contactos}) {
@@ -123,10 +126,13 @@ function Contact({contactos}) {
                     <ContactosTitulo>Información de contacto</ContactosTitulo>
                     {contactos.map((info, index) => (
                         <Contacto>
+                            <Icono>
                             <CustomIcon name={info.icon}/>
+                            </Icono>
                             <Texto>{info.text}</Texto>
                         </Contacto>
                     ))}
+                
                     
                 </Contactos>
             </Secciones>
