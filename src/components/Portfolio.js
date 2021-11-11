@@ -7,6 +7,7 @@ const Section = styled.div`
   height: auto;
 
   position: relative;
+  
 
   align-items: center;
   justify-content: center;
@@ -28,7 +29,7 @@ const CardContainer = styled.div`
   grid-template-columns: auto auto;
   grid-gap: 10px;
   padding: 2rem;
-
+  
   @media screen and (max-width: 900px) {
     grid-template-columns: auto;
     justify-content: center;
@@ -70,6 +71,7 @@ const CardContent = styled.div`
 const ContentContainer = styled.div`
     display: flex;
     align-content: center;
+    
 `;
 
 const Icon = styled(FaCheckCircle)`
