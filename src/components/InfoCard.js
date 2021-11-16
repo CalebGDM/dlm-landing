@@ -17,7 +17,7 @@ const BgImage = styled.img`
     width: 100vw;
     height: 40vh;
     object-fit: cover;
-    background: red
+    
 `;
 
 const Content = styled.div`
@@ -30,6 +30,11 @@ const Content = styled.div`
     width: 50%;
     color: #fff;
     margin-left: 29vw;
+
+    @media screen and (max-width: 760px){
+        margin-left: 20vw;
+        width: 70%;
+    }
 
     @media screen and (max-width: 560px){
         margin-left: 20px;
@@ -45,6 +50,7 @@ const Frase = styled.p`
     
 
     @media screen and (max-width: 760px){
+        width: 100%;
         margin-bottom: -10vh;
         margin-top: 2vh;
     }

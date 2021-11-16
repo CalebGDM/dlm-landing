@@ -1,5 +1,5 @@
 export const menuData = [
-    {title: 'Inicio', link: '/',  },
-    {title: 'Nuestro trabajo', link: '/trabajo'},
-    {title: 'Contáctanos', link: '/contacto'},
+    {title: 'Inicio', to: 'top',  },
+    {title: 'Nuestro trabajo', to: 'portfolio'},
+    {title: 'Contáctanos', to: 'contact'},
 ]

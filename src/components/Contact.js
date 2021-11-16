@@ -41,7 +41,13 @@ const Secciones = styled.div`
         grid-template-columns: auto;
         justify-content: center;
         margin-top: 1rem;
-      }
+    }
+
+    @media screen and (max-width: 360px) {
+        margin-left: 8rem;
+    }
+
+    
 
 `;
 
@@ -52,7 +58,14 @@ const Formulario = styled.form`
     
     @media screen and (max-width: 900px) {
         width: 350px;
-     }
+    }
+
+    @media screen and (max-width: 360px) {
+        width: 280px;
+       
+    }
+
+    
 `;
 
 const Contactos = styled.div`
@@ -72,13 +85,22 @@ const Contacto = styled.div`
     margin-left: 6rem;
     margin-bottom: 15px;
     color: white;
-  
+    align-items: center;
     
+    width: 100%;
 
     @media screen and (max-width: 900px) {
        margin-left: 0rem;
        
     }
+
+    
+
+    @media screen and (max-width: 360px) {
+        
+        width: 60%;
+        
+     }
 
 `;
 
@@ -92,7 +114,14 @@ const Texto = styled.h1`
     font-size: 20px;
     font-weight: bold;
     margin-left: 20px;  
+    
+    position: relative;
     @media screen and (max-width: 900px) {
+        
+        font-size:15;
+    }  
+
+    @media screen and (max-width: 360px) {
         font-size:15;
     }  
 `;

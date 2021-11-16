@@ -53,6 +53,12 @@ const Card = styled.div`
     width: 410px;
     margin-left: 1rem;
   }
+
+  @media screen and (max-width: 460px) {
+    width: 250px;
+    min-width: 90px;
+    margin-left: 0rem;
+  }
 `;
 
 const CardIamge = styled.img`
