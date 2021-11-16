@@ -21,17 +21,19 @@ import Map from './components/Map';
 function App() {
 
   const [isOpen, setIsOpen] = useState(false);
+  
 
   const toggle = () => {
     setIsOpen(!isOpen)
     console.log(isOpen)
   }
+
   
   return (
     <>
       <GlobalStyle/>      
       <Navbar toggle={toggle}/>
-      <Dropdown isOpen={isOpen} toggle={toggle}/>
+      
       <Hero slides={SliderData}/>
       <InfoCard info={InfoData}/>
 

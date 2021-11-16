@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled, { css } from "styled-components/macro";
-import { Link } from 'react-router-dom';
+
 import { menuData } from '../data/MenuData.js';
 import { FaBars } from "react-icons/fa";
 import Logo from '../images/Logo.svg'
+import { animateScroll } from 'react-scroll/modules';
+
 
 const Nav = styled.nav`
-    height: 60px;
+    height: 70px;
     justify-content: space-between;
     align-items; center;
     padding: 0rem 2rem;
@@ -14,13 +16,7 @@ const Nav = styled.nav`
     position: fixed;
     width: 100%;
     display: flex;
-    background: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(0, 0, 0, 0.2) 50%,
-        rgba(0, 0, 0, 0.6) 100%
-    );
-
+    background: ${props => props.active ? '#222223' : 'none'};
 `;
 
 const NavLink = css`
@@ -39,7 +35,7 @@ const NavLink = css`
     }
 `
 
-const NavLogo = styled(Link)`
+const NavLogo = styled.div`
     background-image: url(${Logo});
     background-size: contain;
     height: 70px;
@@ -48,14 +44,15 @@ const NavLogo = styled(Link)`
         transform: translateY(-2px);
         
     }
-    
+    @media screen and (max-width: 760px){
+        margin-left: 30%;
+    }
     
 `;
 
 const MenuBar = styled(FaBars)`
    display: none;
    color: white;   
-
    @media screen and (max-width: 760px){
         display:block;
         color: white;
@@ -66,7 +63,6 @@ const MenuBar = styled(FaBars)`
         right: 0;
         transform: translate(10%, 100%);
     }
-
     &:hover{
         color: #FC807A;
         
@@ -83,25 +79,58 @@ const NavMenu = styled.div`
        
 `;
 
-const NavMenuLinks = styled(Link) `
-    ${NavLink}
-    
-`;
-
-
 function Navbar({ toggle }) {
+
+    const scroll = animateScroll;
+    const [nav, setNav] = useState(false)
+    
+    const NavMenuLinks = styled.a `
+        ${NavLink}
+        
+    `;    
+      
+    const onScrollTop = () => {
+        scroll.scrollToTop()
+    }
+
+    const onScrollProtfolio = () => {
+        scroll.scrollTo(860)
+    }
+
+    const onScrollContact = () => {
+        scroll.scrollTo(1970)
+    }
+
+    const onChangeBg = () => {
+        if (window.scrollY >= 600){
+            setNav(true)
+        }
+        else{
+            setNav(false)
+        }
+    }
+
+    window.addEventListener('scroll', onChangeBg)
+
     return (
-        <Nav>
-            <NavLogo/>
+        <Nav active={nav}>
+            <NavLogo onClick={onScrollTop}/>
                 
-            <MenuBar onClick={toggle}/>
-            
-            <NavMenu>
-                {menuData.map((item, index) => (
-                    <NavMenuLinks to={item.link} key={index}>
-                        {item.title}
-                    </NavMenuLinks>
-                ))}
+            {//<MenuBar onClick={toggle}/>
+            }   
+            <NavMenu>                
+                <NavMenuLinks onClick={onScrollTop}>
+                    Inicio
+                </NavMenuLinks>
+
+                <NavMenuLinks onClick={onScrollProtfolio}>
+                    Nuestro Trabajo
+                </NavMenuLinks>
+
+                <NavMenuLinks onClick={onScrollContact}>
+                    Contáctanos
+                </NavMenuLinks>
+                
             </NavMenu> 
             
         </Nav>

@@ -3,7 +3,8 @@ import { FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import styled from 'styled-components'
 import { menuData } from '../data/MenuData';
-import Logo from '../images/Logo.svg'
+import Logo from '../images/Logo.svg';
+import { animateScroll } from 'react-scroll/modules';
 
 
 const Container = styled.div`
@@ -63,7 +64,7 @@ const DropdownMenu = styled.div`
     
 `;
 
-const DropdownLink = styled(Link)`
+const DropdownLink = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,19 +89,44 @@ const DropdownLink = styled(Link)`
 `;
 
 function Dropdown({isOpen, toggle}) {
+
+    const scroll = animateScroll;
+
+    const onScrollTop = () => {
+        toggle()
+        scroll.scrollToTop()
+    }
+
+    const onScrollPortfolio = () => {
+        toggle()
+        scroll.scrollTo(870)
+    }
+
+    const onScrollContact = () => {
+        toggle()
+        scroll.scrollTo(2480)
+    }
+    
     return (
         <Container isOpen={isOpen} onClick={toggle}> 
-            <NavLogo/>
+            <NavLogo onClick={toggle}/>
             <Icon>
                 <CloseIcon onClick={toggle}/>
             </Icon>
             <Wrapper>
                 <DropdownMenu>
-                    {menuData.map((item, index) => (
-                        <DropdownLink to={item.link} key={index}>
-                            {item.title}
-                        </DropdownLink>
-                    ))}
+                    <DropdownLink onClick={onScrollTop}>
+                        Inicio
+                    </DropdownLink>
+
+                    <DropdownLink onClick={onScrollPortfolio}>
+                        Nuestro trabajo
+                    </DropdownLink>
+
+                    <DropdownLink onClick={onScrollContact}>
+                        Contáctanos
+                    </DropdownLink>
+                    
                 </DropdownMenu>
             </Wrapper>
         </Container>
