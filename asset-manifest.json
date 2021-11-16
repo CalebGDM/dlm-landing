@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.js": "/dlm-landing/static/js/main.b1f3260e.chunk.js",
+    "main.js.map": "/dlm-landing/static/js/main.b1f3260e.chunk.js.map",
+    "runtime-main.js": "/dlm-landing/static/js/runtime-main.33ecbc9b.js",
+    "runtime-main.js.map": "/dlm-landing/static/js/runtime-main.33ecbc9b.js.map",
+    "static/js/2.7ca25de5.chunk.js": "/dlm-landing/static/js/2.7ca25de5.chunk.js",
+    "static/js/2.7ca25de5.chunk.js.map": "/dlm-landing/static/js/2.7ca25de5.chunk.js.map",
+    "static/js/3.bf64662b.chunk.js": "/dlm-landing/static/js/3.bf64662b.chunk.js",
+    "static/js/3.bf64662b.chunk.js.map": "/dlm-landing/static/js/3.bf64662b.chunk.js.map",
+    "index.html": "/dlm-landing/index.html",
+    "static/js/2.7ca25de5.chunk.js.LICENSE.txt": "/dlm-landing/static/js/2.7ca25de5.chunk.js.LICENSE.txt",
+    "static/media/Image5.401026a8.png": "/dlm-landing/static/media/Image5.401026a8.png",
+    "static/media/Imagen1.ea98c621.png": "/dlm-landing/static/media/Imagen1.ea98c621.png",
+    "static/media/Imagen2.1127c219.png": "/dlm-landing/static/media/Imagen2.1127c219.png",
+    "static/media/Imagen3.b4369abe.png": "/dlm-landing/static/media/Imagen3.b4369abe.png",
+    "static/media/Imagen4.48b1972f.png": "/dlm-landing/static/media/Imagen4.48b1972f.png",
+    "static/media/Logo.a5fc4856.svg": "/dlm-landing/static/media/Logo.a5fc4856.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.33ecbc9b.js",
+    "static/js/2.7ca25de5.chunk.js",
+    "static/js/main.b1f3260e.chunk.js"
+  ]
+}
